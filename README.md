@@ -19,7 +19,7 @@ lerna clean
 lerna bootstrap
 ```
 
-### new project
+### new project folder
 ```
 npm run new:project
 Projects name? <Project folder name>
