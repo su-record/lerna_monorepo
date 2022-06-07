@@ -1,0 +1,16 @@
+{
+  "name": "common-ui",
+  "version": "1.0.0",
+  "description": "'common ui components project'",
+  "scripts": {
+    "dev": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "test:unit": "vue-cli-service test:unit"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-unit-jest": "~5.0.0"
+  },
+  "jest": {
+    "preset": "@vue/cli-plugin-unit-jest/presets/typescript-and-babel"
+  }
+}
