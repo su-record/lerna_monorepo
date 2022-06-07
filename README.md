@@ -1,7 +1,5 @@
 # monorepo
 
----
-
 - lerna
 - vue3
 - storybook
