@@ -1,5 +1,5 @@
 const fs = require("fs-extra");
-const exec = require("child_process").exec;
+// const exec = require("child_process").exec;
 const readline = require("readline").createInterface({
   input: process.stdin,
   output: process.stdout,
