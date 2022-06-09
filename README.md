@@ -7,7 +7,12 @@
 - tailwindcss
 - jest
 
-## package install
+## Getting Started
+```
+npm i -g lerna
+```
+
+### Package install & Update
 ```
 npm start
 
