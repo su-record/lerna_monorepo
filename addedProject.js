@@ -6,11 +6,18 @@ const readline = require("readline").createInterface({
 });
 
 const addedProject = (path) => {
-  fs.copy("projects/scaffolding", `projects/${path}`, (err) => {
+  fs.copy("projects/scaffolding", `projects/${path}`, async (err) => {
     if (err) {
       return console.error(err);
     } else {
-      exec(`cd projects/${path} && npm i`);
+      try {
+        const obj = await fs.readJson(`./projects/${path}/package.json`);
+        obj.name = path;
+        await fs.writeJson(`./projects/${path}/package.json`, obj);
+        readline.close();
+      } catch (err) {
+        console.log(err);
+      }
     }
   });
 };
@@ -18,5 +25,4 @@ const addedProject = (path) => {
 readline.question("Projects name? ", (name) => {
   console.log(`Use projects folder name to ${name}`);
   addedProject(name);
-  readline.close();
 });
