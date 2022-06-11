@@ -4,6 +4,11 @@
   "workspaces": [
     "projects/*"
   ],
+  "scripts": {
+    "start": "lerna clean --yes && lerna bootstrap",
+    "added": "node added-project.js",
+    "dev": "node run-dev.js"
+  },
   "devDependencies": {
     "lerna": "^5.1.1"
   }
