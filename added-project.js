@@ -1,5 +1,5 @@
 const fs = require("fs-extra");
-// const exec = require("child_process").exec;
+const { execSync, exec } = require("child_process");
 const readline = require("readline").createInterface({
   input: process.stdin,
   output: process.stdout,
@@ -14,9 +14,11 @@ const addedProject = (path) => {
         const obj = await fs.readJson(`./projects/${path}/package.json`);
         obj.name = path;
         await fs.writeJson(`./projects/${path}/package.json`, obj);
+        await execSync("npm start");
+        exec("rm -rf projects/scaffolding/node_modules");
         readline.close();
       } catch (err) {
-        console.log(err);
+        console.error(err);
       }
     }
   });

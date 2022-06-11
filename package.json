@@ -8,7 +8,8 @@
     "start": "lerna clean --yes && lerna bootstrap",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "new:project": "node addedProject.js",
+    "added": "node added-project.js",
+    "dev": "node run-dev.js",
     "common-ui:test": "cd projects/common-ui && npm run test:unit"
   },
   "devDependencies": {
