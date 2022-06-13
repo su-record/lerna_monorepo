@@ -24,7 +24,7 @@ lerna bootstrap
 ## Project Management
 - ### Added
     ```
-    npm run project:added
+    npm run added
     Added to Projects name? <Project name>
     ```
     - root package.json add to script
