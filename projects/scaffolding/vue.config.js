@@ -1,8 +1,10 @@
 const { defineConfig } = require("@vue/cli-service");
 const path = require("path");
-const { VUE_APP_PORT, NODE_ENV } = process.env;
+const { VUE_APP_PORT, NODE_ENV, VUE_APP_NAME } = process.env;
+
 module.exports = defineConfig({
   transpileDependencies: true,
+  outputDir: path.resolve(__dirname, `../../../${VUE_APP_NAME}_prod/dist`),
   assetsDir: "assets",
   productionSourceMap: false,
   chainWebpack: (config) => {
