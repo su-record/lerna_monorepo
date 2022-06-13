@@ -1,5 +1,5 @@
 const fs = require("fs-extra");
-const { execSync, exec } = require("child_process");
+const { execSync } = require("child_process");
 const readline = require("readline").createInterface({
   input: process.stdin,
   output: process.stdout,
@@ -14,8 +14,8 @@ const addedProject = (path) => {
         const obj = await fs.readJson(`./projects/${path}/package.json`);
         obj.name = path;
         await fs.writeJson(`./projects/${path}/package.json`, obj);
+        await fs.outputFile(`./projects/${path}/.env`, `VUE_APP_NAME=${path}`);
         await execSync("npm start");
-        exec("rm -rf projects/scaffolding/node_modules");
         readline.close();
       } catch (err) {
         console.error(err);
