@@ -27,7 +27,6 @@ const addedProject = (path) => {
   });
 };
 
-readline.question("Projects name? ", (name) => {
-  console.log(`Use projects folder name to ${name}`);
+readline.question("Added to Projects name? ", (name) => {
   addedProject(name);
 });

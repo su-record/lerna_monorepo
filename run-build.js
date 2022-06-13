@@ -4,7 +4,7 @@ const readline = require("readline").createInterface({
   output: process.stdout,
 });
 
-readline.question("Run build to project directory? ", async (name) => {
+readline.question("Build to project directory? ", async (name) => {
   await exec("npm run build", { cwd: `projects/${name}` });
   readline.close();
 });
