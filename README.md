@@ -1,5 +1,4 @@
 # monorepo
-
 - lerna
 - vue3
 - storybook
@@ -12,7 +11,7 @@
 npm i -g lerna
 ```
 
-### Package install & Update
+## Setup & Update
 ```
 npm start
 
@@ -22,25 +21,33 @@ lerna clean
 lerna bootstrap
 ```
 ---
-### new project folder
-```
-npm run project:added
-Added to Projects name? <Project directory name>
-```
-- root package.json add to script
-```
-{
-    ...
-    "scripts": {
+## Project Management
+- ### Added
+    ```
+    npm run project:added
+    Added to Projects name? <Project name>
+    ```
+    - root package.json add to script
+    ```
+    {
         ...
-        "dev:<project name>": "cd projects/<project name> && npm run serve"
-        ...
+        "scripts": {
+            ...
+            "dev:<project name>": "cd projects/<project name> && npm run serve"
+            ...
+        }
     }
-}
-```
----
-### project build
-```
-npm run project:build
-Build to Project name? <Project directory name>
-```
+    ```
+- ### Run & Storybook
+    ```
+    npm run storybook
+    
+    or
+  
+    npm run dev:<project name>  
+    ```
+- ### Build
+    ```
+    npm run project:build
+    Build to Project name? <Project directory name>
+    ```

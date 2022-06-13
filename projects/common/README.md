@@ -1,11 +1,10 @@
 # Default Scaffolding
 Vue CLI v5.0.4
 - Please pick a preset : Manually select features
-- Check the features needed for your project : Babel, TypeScript, Router, Vuex, CSS Pre-processors, Unit Testing
+- Check the features needed for your project : Babel, TypeScript, CSS Pre-processors, Unit Testing
 - Choose a versions of Vue.js that you want to start the project with : 3.x
 - Use class-style component syntax? No
 - Use Babel alongside TypeScript? Yes
-- Use history mode for router? Yes
 - Pick a CSS pre-processor : Sass/SCSS (with dart-sass)
 - Pick a linter / formatter config : ESLint + Prettier
 - Pick additional lint features : Lint on save
