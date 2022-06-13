@@ -1,4 +1,5 @@
 # Default Scaffolding
+Storybook/vue3  
 Vue CLI v5.0.4
 - Please pick a preset : Manually select features
 - Check the features needed for your project : Babel, TypeScript, CSS Pre-processors, Unit Testing
@@ -10,7 +11,6 @@ Vue CLI v5.0.4
 - Pick additional lint features : Lint on save
 - Pick a unit testing solution : Jest
 - Where do you prefer placing config for Babel, ESLint, etc.? In package.json
-
 
 ## Project setup
 ```
