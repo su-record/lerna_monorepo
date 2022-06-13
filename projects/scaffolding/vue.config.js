@@ -43,7 +43,7 @@ module.exports = defineConfig({
     },
   },
   devServer: {
-    // port: VUE_APP_PORT,
+    port: VUE_APP_PORT,
     hot: true,
   },
 });
