@@ -49,5 +49,5 @@ lerna bootstrap
 - ### Build
     ```
     npm run project:build
-    Build to Project name? <Project directory name>
+    Build to Project name? <Project name>
     ```
