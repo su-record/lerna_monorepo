@@ -5,7 +5,7 @@ const readline = require("readline").createInterface({
   output: process.stdout,
 });
 
-const addedProject = (path) => {
+const projectAdded = (path) => {
   fs.copy("projects/scaffolding", `projects/${path}`, async (err) => {
     if (err) {
       return console.error(err);
@@ -28,5 +28,5 @@ const addedProject = (path) => {
 };
 
 readline.question("Added to Projects name? ", (name) => {
-  addedProject(name);
+  projectAdded(name);
 });
