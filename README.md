@@ -33,7 +33,7 @@ lerna bootstrap
         ...
         "scripts": {
             ...
-            "dev:<project name>": "cd projects/<project name> && npm run serve"
+            "dev:<Project name>": "cd projects/<Project name> && npm run serve"
             ...
         }
     }
@@ -44,7 +44,7 @@ lerna bootstrap
     
     or
   
-    npm run dev:<project name>  
+    npm run dev:<Project name>  
     ```
 - ### Build
     ```
