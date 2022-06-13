@@ -8,7 +8,7 @@
     "start": "lerna clean --yes && lerna bootstrap",
     "storybook": "cd projects/common && npm run storybook",
     "added": "node added-project.js",
-    "dev": "node run-dev.js"
+    "dev:scaffolding": "cd projects/scaffolding && npm run serve"
   },
   "devDependencies": {
     "lerna": "^5.1.1"
