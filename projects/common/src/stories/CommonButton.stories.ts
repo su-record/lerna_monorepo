@@ -9,7 +9,7 @@ export default {
   },
 } as Meta<typeof CommonButton>;
 
-const Template: StoryFn<typeof CommonButton> = (args) => ({
+const Template: StoryFn<typeof CommonButton> = args => ({
   components: { CommonButton },
   setup() {
     return {

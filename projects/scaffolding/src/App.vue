@@ -9,13 +9,10 @@
 </template>
 
 <script setup lang="ts">
-import CommonButton from "@project/common/src/components/CommonButton.vue";
+import CommonButton from "projects-common/src/components/CommonButton.vue";
 </script>
 
 <style lang="scss">
-@import "src/styles/reset";
-@import "src/styles/common";
-
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

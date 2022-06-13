@@ -13,7 +13,7 @@
     "sourceMap": true,
     "baseUrl": ".",
     "types": ["webpack-env", "node", "jest"],
-    "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
   },
   "include": [
     "projects/**/*.ts",

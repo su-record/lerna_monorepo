@@ -5,22 +5,15 @@ module.exports = defineConfig({
   transpileDependencies: true,
   assetsDir: "assets",
   productionSourceMap: false,
-  chainWebpack: (config) => {
-    config.resolve.alias
-      .set("@", path.resolve(__dirname, "src/"))
-      .set("@views", path.resolve(__dirname, "src/views/"))
-      .set("@components", path.resolve(__dirname, "src/components/"))
-      .set("@constants", path.resolve(__dirname, "src/constants/"))
-      .set("@config", path.resolve(__dirname, "src/config/"))
-      .set("@utils", path.resolve(__dirname, "src/utils/"))
-      .set("@styles", path.resolve(__dirname, "src/styles/"));
+  chainWebpack: config => {
+    config.resolve.alias.set("@", path.resolve(__dirname, "src/"));
     config.module.rule("images").set("parser", {
       dataUrlCondition: {
         maxSize: 4 * 1024,
       },
     });
   },
-  configureWebpack: (config) => {
+  configureWebpack: config => {
     if (NODE_ENV === "production") {
       config.mode = "production";
       // config.output.filename = 'js/[name].[hash].js'
