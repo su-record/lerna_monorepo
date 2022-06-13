@@ -24,6 +24,6 @@ lerna bootstrap
 
 ### new project folder
 ```
-npm run new:project
+npm run added
 Projects name? <Project folder name>
 ```

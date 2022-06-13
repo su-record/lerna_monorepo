@@ -6,7 +6,7 @@
   ],
   "scripts": {
     "start": "lerna clean --yes && lerna bootstrap",
-    "storybook": "cd projects/common-ui && npm run storybook",
+    "storybook": "cd projects/common && npm run storybook",
     "added": "node added-project.js",
     "dev": "node run-dev.js"
   },

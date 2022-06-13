@@ -4,17 +4,17 @@
     <router-link to="/about">About</router-link>
   </nav>
 
-  <common-button :label="'common-ui import button'"></common-button>
+  <common-button :label="'common import button'"></common-button>
   <router-view />
 </template>
 
 <script setup lang="ts">
-import CommonButton from "common-ui/src/components/CommonButton.vue";
+import CommonButton from "@project/common/src/components/CommonButton.vue";
 </script>
 
 <style lang="scss">
-@import "@styles/reset.scss";
-@import "@styles/common.scss";
+@import "src/styles/reset";
+@import "src/styles/common";
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
