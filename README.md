@@ -25,7 +25,7 @@ lerna bootstrap
 - ### Added
     ```
     npm run added
-    Added to Projects name? <Project name>
+    Added to Projects? <Project name>
     ```
     - root package.json add to script
     ```
@@ -49,5 +49,5 @@ lerna bootstrap
 - ### Build
     ```
     npm run project:build
-    Build to Project name? <Project name>
+    Build to Project? <Project name>
     ```
