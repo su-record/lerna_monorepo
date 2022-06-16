@@ -27,7 +27,7 @@ lerna bootstrap
     npm run project:added
     Added to Projects? <Project name>
     ```
-    - root package.json add to script
+    - root package.json add to run serve script
     ```
     {
         ...
