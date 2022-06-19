@@ -7,19 +7,21 @@
 - jest
 
 ## Getting Started
-```
-npm i -g lerna
-```
-
-## Setup & Update
-```
-npm start
-
-or
-
-lerna clean
-lerna bootstrap
-```
+>Node version ^16.x
+- ### Lerna & Yarn install
+  ```
+  npm i -g lerna
+  npm i -g yarn
+  ```
+- ### Setup & Update
+  ```
+  npm start
+    
+  or
+    
+  lerna clean
+  lerna bootstrap
+  ```
 ---
 ## Project Management
 - ### Added
