@@ -22,17 +22,6 @@ module.exports = defineConfig({
       config.mode = "development";
     }
   },
-  css: {
-    extract: true,
-    sourceMap: true,
-    loaderOptions: {
-      scss: {
-        additionalData: `
-          @import "@styles/override.scss";
-        `,
-      },
-    },
-  },
   devServer: {
     // port: VUE_APP_PORT,
     hot: true,
