@@ -18,5 +18,17 @@ const Template: StoryFn<typeof CheckBox> = (args, { updateArgs }) => ({
 
 export const Default = Template.bind({});
 Default.args = {
-  theme: "flex",
+  background: "",
+};
+
+export const Slide = Template.bind({});
+Slide.args = {
+  bgColor: "#3466c2",
+  slide: true,
+};
+
+export const Square = Template.bind({});
+Square.args = {
+  bgColor: "#53d350",
+  square: true,
 };
