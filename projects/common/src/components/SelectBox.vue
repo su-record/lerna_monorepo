@@ -11,8 +11,8 @@
 
 <script setup lang="ts">
 import { TObj, TValue } from "@/constants/types";
-import { computed, onMounted, reactive, Ref, ref, watch } from "vue";
-import { CommonUtils } from "../../utils";
+import { computed, Ref, ref } from "vue";
+import { CommonUtils } from "@/utils";
 import { useUUID } from "@/composable/useUUID";
 
 interface ISelectOption {
