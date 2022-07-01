@@ -45,6 +45,7 @@
         }
     }
     ```
+    - root folder path ```npm start```
 - ### Run & Storybook
     ```
     npm run storybook
