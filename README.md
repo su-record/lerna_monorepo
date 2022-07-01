@@ -38,6 +38,11 @@
             "dev:<Project name>": "cd projects/<Project name> && npm run serve"
             ...
         }
+        ...
+        "dependencies": {
+            ...
+            "<Project name>": "file:projects/<Project name>"
+        }
     }
     ```
 - ### Run & Storybook
