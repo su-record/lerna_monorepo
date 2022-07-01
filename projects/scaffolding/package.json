@@ -7,8 +7,6 @@
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
     "locale": "node localeHelper.js"
   },
   "dependencies": {
