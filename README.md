@@ -38,8 +38,14 @@
             "dev:<Project name>": "cd projects/<Project name> && npm run serve"
             ...
         }
+        ...
+        "dependencies": {
+            ...
+            "<Project name>": "file:projects/<Project name>"
+        }
     }
     ```
+    - root folder path ```npm start```
 - ### Run & Storybook
     ```
     npm run storybook
