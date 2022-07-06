@@ -30,7 +30,7 @@ module.exports = defineConfig({
     loaderOptions: {
       scss: {
         additionalData: `
-          @import "@styles/override.scss";
+          @import "@/styles/override.scss";
         `,
       },
     },

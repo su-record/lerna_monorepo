@@ -13,6 +13,11 @@ import CommonButton from "projects-common/src/components/CommonButton.vue";
 </script>
 
 <style lang="scss">
+@import "@mdi/font/css/materialdesignicons.min.css";
+@import "projects-common/src/assets/styles/index.css";
+@import "projects-common/src/assets/styles/reset";
+@import "projects-common/src/assets/styles/common";
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
