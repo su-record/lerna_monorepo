@@ -1,9 +1,7 @@
-import { createApp } from "vue";
-import App from "./App.vue";
+import { createApp } from 'vue'
+import App from './App.vue'
 
-import "@mdi/font/css/materialdesignicons.min.css";
-import "@/assets/styles/index.css";
-import "@/assets/styles/reset.scss";
-import "@/assets/styles/common.scss";
+import './assets/main.css'
+import './assets/index.css'
 
-createApp(App).mount("#app");
+createApp(App).mount('#app')

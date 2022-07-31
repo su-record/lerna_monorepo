@@ -1,4 +1,4 @@
-import "../src/assets/styles/index.css";
+import { withSource } from './withSource';
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -8,4 +8,6 @@ export const parameters = {
       date: /Date$/,
     },
   },
-};
+}
+
+export const decorators = [withSource];
