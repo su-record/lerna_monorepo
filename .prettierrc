@@ -8,7 +8,5 @@
   "printWidth": 90,
   "bracketSpacing": true,
   "arrowParens": "avoid",
-  "endOfLine": "auto",
+  "endOfLine": "auto"
 }
-
-// https://velog.io/@kyusung/eslint-prettier-config

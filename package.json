@@ -4,6 +4,14 @@
   "workspaces": [
     "projects/*"
   ],
+  "scripts": {
+    "start": "lerna clean --yes && lerna bootstrap",
+    "update": "node project-clean.js && lerna bootstrap",
+    "storybook": "cd projects/common && npm run storybook",
+    "project:added": "node project-added.js",
+    "project:build": "node project-build.js",
+    "dev:com": "cd projects/common && npm run dev"
+  },
   "dependencies": {
     "common": "file:projects\\common",
     "fs-extra": "^10.1.0",

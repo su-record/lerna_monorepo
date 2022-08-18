@@ -9,6 +9,17 @@ module.exports = {
     '@storybook/addon-interactions',
   ],
   framework: '@storybook/vue3',
+  webpackFinal: async (config, { configType }) => {
+    config.module.rules.push({
+      test: /\.scss/,
+      use: ['style-loader', 'css-loader', 'sass-loader'],
+      include: path.resolve(__dirname, '../'),
+    });
+
+    config.resolve.alias['@'] = path.resolve(__dirname, '../src');
+
+    return config;
+  },
   core: {
     builder: '@storybook/builder-vite',
   },
@@ -18,8 +29,8 @@ module.exports = {
     reactDocgen: 'react-docgen-typescript',
     reactDocgenTypescriptOptions: {
       shouldExtractLiteralValuesFromEnum: true,
-      propFilter: (prop) =>
-          prop.parent ? !/node_modules/.test(prop.parent.fileName) : true,
+      propFilter: prop =>
+        prop.parent ? !/node_modules/.test(prop.parent.fileName) : true,
     },
   },
   features: {
@@ -28,7 +39,7 @@ module.exports = {
 
   async viteFinal(previousConfig) {
     const { config } = await loadConfigFromFile(
-        path.resolve(__dirname, '../vite.config.ts')
+      path.resolve(__dirname, '../vite.config.ts'),
     );
 
     return mergeConfig(previousConfig, {
