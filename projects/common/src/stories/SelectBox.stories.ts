@@ -24,7 +24,7 @@ const Template: StoryFn<typeof SelectBox> = args => ({
       args,
     };
   },
-  template: `<select-box v-model:modelValue="model" v-bind="args" />`,
+  template: `<select-box v-model="model" v-bind="args" />`,
 });
 
 export const Default = Template.bind({});

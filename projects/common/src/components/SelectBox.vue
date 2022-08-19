@@ -1,5 +1,5 @@
 <template>
-  <div :id="uid" :class="[`select-box--${size}`, classes]" v-outside="outSideClick">
+  <div :id="uid" :class="[`select-box--${size}`]" v-outside="outSideClick">
     <button @click="handlerButtonToggle">{{ selectItem.label }}</button>
     <ul ref="optionList" style="display: none" @click="emitValue">
       <li v-for="(option, i) in selectOptions" :key="i" :value="option.value">
@@ -10,10 +10,10 @@
 </template>
 
 <script setup lang="ts">
-import { computed, Ref, ref } from 'vue';
+import { computed, type Ref, ref } from 'vue';
 import { createUUID, msDelay, objectToArray } from '../utils';
-import { ObjectKeyString } from '../constants/interfaces';
-import { Value } from '../constants/types';
+import type { ObjectKeyString } from '../constants/interfaces';
+import type { Value } from '../constants/types';
 
 interface ISelectOption {
   label: string;
@@ -36,7 +36,9 @@ const props = defineProps({
   },
   options: {
     type: Object,
-    default: {} as ObjectKeyString,
+    default() {
+      return {} as ObjectKeyString;
+    },
   },
 });
 
@@ -76,8 +78,4 @@ const handlerButtonToggle = (function () {
 const outSideClick = function (): void {
   handlerButtonToggle();
 };
-
-const classes = computed(() => ({
-  '': true,
-}));
 </script>

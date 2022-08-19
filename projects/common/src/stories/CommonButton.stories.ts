@@ -1,6 +1,6 @@
-import { Meta, StoryFn } from '@storybook/vue3';
+import type { Meta, StoryFn } from '@storybook/vue3';
 import { ref } from 'vue';
-import CommonButton from '@/components/CommonButton.vue';
+import CommonButton from '../components/CommonButton.vue';
 
 export default {
   title: 'Clicked/button',
@@ -33,8 +33,6 @@ const Template: StoryFn<typeof CommonButton> = args => ({
     })();
 
     const toggle = function () {
-      console.log('????');
-      // click status ???
       if (onToggle()) console.log('#### click true!');
       else console.log('### click false!');
     };
@@ -46,19 +44,19 @@ const Template: StoryFn<typeof CommonButton> = args => ({
   },
 
   template: `
-       <CommonButton
-        class="button"
-          @click="toggle"
+    <CommonButton
+      class="button"
+      @click="toggle"
       v-bind="args"
       :bg-color="bgColor"
-       >
+    >
       <img style="width:200px" src="https://t1.daumcdn.net/cfile/tistory/24283C3858F778CA2E" alt="info 1" />
     </CommonButton>`,
 });
 
 export const Default = Template.bind({});
 Default.args = {
-  label: '공주박물관',
+  label: 'button',
   theme: { color: 'blue' },
 };
 Default.parameters = {

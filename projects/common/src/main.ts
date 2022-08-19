@@ -1,6 +1,8 @@
 import { createApp } from 'vue';
 import App from './App.vue';
 
-import './assets/index.css';
+import OutSideClick from './directives/OutSideClick';
 
-createApp(App).mount('#app');
+const app = createApp(App);
+app.directive('outside', OutSideClick);
+app.mount('#app');

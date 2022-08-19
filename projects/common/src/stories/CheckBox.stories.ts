@@ -7,7 +7,7 @@ export default {
   component: CheckBox,
 } as Meta<typeof CheckBox>;
 
-const Template: StoryFn<typeof CheckBox> = (args, { updateArgs }) => ({
+const Template: StoryFn<typeof CheckBox> = args => ({
   components: { CheckBox },
   setup() {
     const model = ref('Y');
@@ -33,23 +33,9 @@ Slide.args = {
   bgColor: '#3466c2',
   isSlide: true,
 };
-Slide.parameters = {
-  docs: {
-    source: {
-      code: `<check-box v-model="model" bg-color="#FFFFFF" slide/>`,
-    },
-  },
-};
 
 export const Square = Template.bind({});
 Square.args = {
   bgColor: '#53d350',
   isSquare: true,
-};
-Square.parameters = {
-  docs: {
-    source: {
-      code: `<check-box v-model="model" bg-color="#FFO" square/>`,
-    },
-  },
 };
