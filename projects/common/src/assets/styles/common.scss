@@ -4,3 +4,128 @@
   margin: 0 auto;
   height: 100%;
 }
+
+/* dialog */
+.dialog-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.65);
+  }
+
+  .dialog-content {
+    padding: 72px 48px 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 694px;
+    min-height: 425px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 24px;
+    transform: scale(0.5);
+    transition: transform 0.3s;
+
+    &__title {
+      font-weight: 700;
+      font-size: 48px;
+      color: #343a40;
+    }
+
+    &__desc {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 129px;
+      font-weight: 400;
+      font-size: 36px;
+    }
+
+    &__buttons {
+      gap: 20px;
+
+      button,
+      a {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 120px;
+        font-weight: 700;
+        font-size: 36px;
+        color: #fff;
+        background-color: #f15a22;
+        border-radius: 16px;
+      }
+    }
+    .dialog-button__cancel {
+      background-color: #979797;
+    }
+  }
+  &.show {
+    opacity: 1;
+    .dialog-content {
+      transform: scale(1);
+    }
+  }
+
+  &.modal-loading {
+    .letter {
+      font-size: 48px;
+      color: #fff;
+      animation: loading 1.6s infinite linear;
+    }
+
+    .l-1 {
+      animation-delay: 0.48s;
+    }
+    .l-2 {
+      animation-delay: 0.6s;
+    }
+    .l-3 {
+      animation-delay: 0.72s;
+    }
+    .l-4 {
+      animation-delay: 0.84s;
+    }
+    .l-5 {
+      animation-delay: 0.96s;
+    }
+    .l-6 {
+      animation-delay: 1.08s;
+    }
+    .l-7 {
+      animation-delay: 1.2s;
+    }
+    .l-8 {
+      animation-delay: 1.32s;
+    }
+    .l-9 {
+      animation-delay: 1.44s;
+    }
+    .l-10 {
+      animation-delay: 1.56s;
+    }
+  }
+}
+
+@keyframes loading {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -15,6 +15,10 @@ const store = useStore();
 setTimeout(() => {
   store.commit(COMMON_MUTATION_KEYS.PROGRESS, true);
 }, 2000);
+
+setTimeout(() => {
+  store.commit(COMMON_MUTATION_KEYS.PROGRESS, false);
+}, 5000);
 </script>
 
 <style lang="scss">
