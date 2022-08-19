@@ -1,4 +1,4 @@
-# monorepo
+# Curating 5 : monorepo
 - lerna
 - vue3
 - storybook
@@ -27,34 +27,29 @@
 - ### Added
     ```
     npm run project:added
-    Added to Projects? <Project name>
+    Added to Project? <Project name>
     ```
-    - root package.json add to run serve script
-    ```
+  - root package.json add to script & dependencies
+    ```json
     {
-        ...
-        "scripts": {
-            ...
-            "dev:<Project name>": "cd projects/<Project name> && npm run serve"
-            ...
-        }
-        ...
-        "dependencies": {
-            ...
-            "<Project name>": "file:projects/<Project name>"
-        }
+      "scripts": {
+        "dev:<Project nick name>": "cd projects/<Project folder> && npm run serve"
+      },
+      "dependencies": {
+        "<Project name>": "file:projects/<Project name>"
+      }
     }
     ```
-    - root folder path ```npm start```
+  - root folder path ```npm run update```
 - ### Run & Storybook
     ```
     npm run storybook
     
     or
   
-    npm run dev:<Project name>  
+    npm run dev:<Project nick name>  
     ```
-- ### Build
+- ### Local Build
     ```
     npm run project:build
     Build to Project? <Project name>
