@@ -1,4 +1,4 @@
-import type { DialogActions, LocaleCode } from '../types';
+import { DialogActions } from '../types';
 
 export interface ObjectKeyString {
   [key: string]: any | ObjectKeyString;
@@ -35,8 +35,4 @@ export interface Dialog {
   title: string;
   desc: string;
   isError: boolean;
-}
-
-export interface LoadPage {
-  lang: LocaleCode;
 }

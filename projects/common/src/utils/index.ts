@@ -1,7 +1,7 @@
 /***
  * @description const to array
  * */
-import type { ButtonProps, CreateObjProps } from '../constants/interfaces';
+import { ButtonProps, CreateObjProps, ObjectKeyString } from '../constants/interfaces';
 
 export const objectToArray = <T extends object>(obj: T): T[] => {
   return Object.entries(obj).reduce((result: T[], [key, value]) => {

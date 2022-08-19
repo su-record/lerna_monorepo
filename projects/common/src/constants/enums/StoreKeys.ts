@@ -13,4 +13,6 @@ export const enum COMMON_MUTATION_KEYS {
   PAGE_VO = 'pageVo',
 }
 
-export const enum COMMON_ACTION_KEYS {}
+export const enum COMMON_ACTION_KEYS {
+  CHANGE_REQUEST = 'changeRequest',
+}

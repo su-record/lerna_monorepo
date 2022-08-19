@@ -1,16 +1,14 @@
-import fs from 'fs';
-import { GoogleSpreadsheet } from 'google-spreadsheet';
-import creds from '../../creds.json';
-import path from 'path';
-const __dirname = path.resolve();
-const LANGS = ['ko', 'en', 'zh', 'ja'];
+const fs = require('fs');
+const { GoogleSpreadsheet } = require('google-spreadsheet');
+const creds = require('../../creds.json');
+const LANGS = ['ko', 'en', 'cn', 'jp'];
 
 async function main() {
   try {
-    const doc = new GoogleSpreadsheet('...');
+    const doc = new GoogleSpreadsheet(''); // sheetsById
     await doc.useServiceAccountAuth(creds);
     await doc.loadInfo();
-    const sheet = doc.sheetsById[1549787342];
+    const sheet = doc.sheetsById[0]; // sheet tab id
     const rows = await sheet.getRows({ offset: 0, limit: 2000 });
     const parsedRows = rows.map(row => ({
       pageId: row['PAGE_ID'],
@@ -18,8 +16,8 @@ async function main() {
       comp: row['COMP'],
       ko: row['KR_A'],
       en: row['EN_A'],
-      zh: row['CH_A'],
-      ja: row['JP_A'],
+      cn: row['CH_A'],
+      jp: row['JP_A'],
     }));
     const REG_EXP = /\s*\n\s*/g;
     const REG_EXP2 = /\r/g;
@@ -31,11 +29,9 @@ async function main() {
             const fixedCompId = cur.compId.replace(REG_EXP2, '');
             for (let i = 0; i < LANGS.length; i++) {
               const lang = LANGS[i];
-
-              if (!Object.prototype.hasOwnProperty.call(acc[lang], fixedPageId)) {
+              if (!acc[lang].hasOwnProperty(fixedPageId)) {
                 acc[lang][fixedPageId] = {};
               }
-
               if (acc[lang][fixedPageId])
                 acc[lang][fixedPageId][fixedCompId] =
                   (cur[lang] && cur[lang].replace(REG_EXP, '<br>')) || '';
@@ -47,8 +43,8 @@ async function main() {
       {
         ko: {},
         en: {},
-        zh: {},
-        ja: {},
+        cn: {},
+        jp: {},
       },
     );
 
