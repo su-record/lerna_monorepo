@@ -15,7 +15,7 @@
 </template>
 
 <script lang="ts" setup>
-import { Theme } from '../constants/types';
+import type { Theme } from '../constants/types';
 
 const props = defineProps({
   label: String,

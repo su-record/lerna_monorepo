@@ -20,7 +20,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, watch, type Ref } from 'vue';
+import { ref, watch, Ref } from 'vue';
 import { msDelay } from '../utils';
 
 const props = defineProps({
